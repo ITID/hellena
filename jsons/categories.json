@@ -1,0 +1,28 @@
+{
+	"1":{
+		"id": "administrate",
+		"title": "Administrate sistem",
+		"cat_img": "res/icons/6.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating",
+			"id": "adms",
+			"content_url": "forms/adms.html"
+		}
+	},
+	"2":{
+		"id": "load",
+		"title": "Load some content",
+		"cat_img": "res/icons/5.png",
+		"menu_command": "load_submenu",
+		"menu_args": ""
+	},
+	"3":{
+		"id": "load2",
+		"title": "Load some content 2",
+		"cat_img": "res/icons/3.png",
+		"menu_command": "load_submenu",
+		"menu_args": ""
+	}
+
+}

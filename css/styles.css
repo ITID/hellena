@@ -1,0 +1,274 @@
+/* CSS Document */
+
+html, body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+}
+
+#desktop{
+	width:100% !important;
+	min-height:100% !important;
+	background-color:#2D9EA0;
+	background-image:url(../res/background/p112.jpg);
+	background-size:cover;
+
+}
+
+#sitebar{
+	width: 100% !important;
+    position: absolute;
+    top: 0;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 35px -6px white;
+	z-index:9999;
+
+}
+
+#menu_icon{
+	width:4%;
+	height:100% !important;
+	border-right:1px solid #242633;
+	text-align:center;
+	opacity:0.7;
+	transition:ease 0.3s all;
+	float:left;
+}
+
+#menu_icon:hover{
+	cursor:pointer;
+	opacity:1;
+	transition:ease 0.3s all;
+}
+
+
+.menu_icon{
+	height:90% !important;
+	margin:auto;
+}
+
+#menu{
+	min-height:600px;
+	min-width: 585px;
+	display:none;
+	padding:10px;
+	transition:ease 0.3s all;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	background-color:rgba(236,232,232,0.89);
+}
+
+#menu:hover{
+	opacity:1;
+	background-color:rgba(236,232,232,1);
+	cursor:default;
+	transition:ease 0.3s all;
+}
+
+#desktop_content{
+	position:absolute;
+	top:40px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.window{
+	min-width:600px;
+	width:600px;
+	min-height:400px;
+	background-color:#F1EFEF;
+	border:1px solid #242633;
+	position:absolute;
+
+}
+
+.window_top{
+	position:absolute;
+	width:100%;
+	background-color:#242633 !important;
+	color:white;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	cursor:pointer;
+
+}
+
+
+.window_top li{
+	float:left;
+	list-style-type:none;
+	padding:3px;
+	margin:2px;
+}
+
+.window_top .buttons:hover{
+	opacity:0.7;
+	cursor:pointer;
+}
+
+.window_maximized{
+	width:100%;
+	top:0 !important;
+	left:0 !important;
+//	transition:ease-in-out 0.2s all;
+}
+
+.window_minimized{
+	width:600px;
+	height:400px !important;
+//	transition:ease-in-out 0.2s all;
+}
+
+.window_content{
+	margin-top: 40px;
+}
+.taskbar_window{
+	width:140px;
+	height:30px;
+	float:left;
+	cursor:pointer;
+	display:block;
+	text-align:center;
+	padding-top:8px	;
+	opacity:0.7;
+	transition:ease 0.3s all;
+	margin-left:1px;
+	margin-right:1px;
+
+
+
+}
+
+.taskbar_window > .opened{
+
+}
+
+.taskbar_window:hover{
+	opacity:1;
+	transition:ease 0.3s all;
+}
+
+.taskbar_window span{
+	margin:0;
+	padding:0;
+	color:#EBEBEB;
+	font-size:14px;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	height:20px;
+	overflow:hidden;
+	display:inline-block;
+	padding-right:10px;
+}
+
+.taskbar_window.active{
+	border-bottom:1px solid white;
+}
+
+#menu.is_opened{
+	transition:ease 0.3s all;	
+	display:block;
+
+}
+
+#menu.is_closed{
+	transition:ease 0.3s all;
+	display:none;
+
+}
+
+#menu_elements{
+	width: 280px;
+	height:590px;
+	float:left;
+	padding-left: 8px;
+}
+
+#menu_categories{
+	width:295px;
+	height:590px;
+	float:left;
+	border:1px groove #F1EFEF;
+	box-shadow:0px 0px 10px 2px #F1EFEF;
+	border-radius:3px;
+
+}
+
+.menu_category{
+	position:relative;
+	width:275px;
+	height:40px !important;
+	border: 1px groove #57575F;
+	margin:5px;
+	background-color:none;
+	border-radius: 4px;
+	transition:ease 0.3s all;
+}
+
+.menu_category:hover{
+	background-color:#fdf5ce;
+	transition:ease 0.3s all;
+}
+
+.menu_category img{
+	height:30px;
+	margin:5px;
+	float:left;
+}
+
+.menu_category h4{
+	margin:0;
+	padding:0;
+	float:left;
+	color: #57575F;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	padding-top:8px;
+	height:30px;
+	width:200px;
+	transition:ease 0.3s all;
+	border-radius: 2px;
+}
+
+.menu_category h4:hover{
+
+	cursor: pointer;
+	transition:ease 0.3s all;
+}
+
+
+.menu_element{
+	float:left;
+	width: 80px;
+	height: 80px;
+	border:1px groove  #F1EFEF;
+	overflow:hidden;
+	margin:5px;
+	border-radius: 3px;
+	/* border-color: #1B1C28; */
+	border: 1px groove #57575F;
+	vertical-align: middle;
+}
+
+.menu_element:hover{
+	cursor: pointer;
+}
+.menu_element img{
+	float:left;
+	height:135px;
+	transition:ease 0.3s all;
+	width: 100%;
+	height: 100%;
+}
+
+.menu_element img:hover{
+	opacity:0.5;
+	transition:ease 0.3s all;
+}
+
+.box-shadowed{
+	box-shadow: 0 0 20px rgba(253,253,253,1);
+		transition:ease 0.3s all;	
+}

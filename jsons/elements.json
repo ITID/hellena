@@ -1,0 +1,51 @@
+{
+	"1":{
+		"id": "administrate",
+		"parent_id": "load",
+		"title": "Administrate sistem",
+		"cat_img": "res/icons/6.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms1",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"2":{
+		"id": "load_d",
+		"parent_id": "load",
+		"title": "Load some content",
+		"cat_img": "res/icons/5.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms2",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"3":{
+		"id": "act1",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"4":{
+		"id": "load_3",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	}
+
+}
