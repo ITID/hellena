@@ -272,3 +272,9 @@ html, body{
 	box-shadow: 0 0 20px rgba(253,253,253,1);
 		transition:ease 0.3s all;	
 }
+
+.contextMenu{
+	min-height: 30px;
+	width: 200px;
+	background-color: #dddddd;
+}

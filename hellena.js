@@ -6,6 +6,7 @@ PageProp.iioc = {};
 PageProp.Desktop = {};
 PageProp.MenuCategories = {};
 PageProp.MenuElements = {};
+PageProp.ContextMap = {};
 $(function(){
 
 PageProp.Desktop.width = $(window).width();
@@ -393,32 +394,85 @@ $(document).on("click", "#menu_icon", function(event){
 		}
 })
 
+	$(document).on("click", ".window", function(){
+		var attr = $(this).attr("data-win_id");
+		$(".window").css("z-index",0);
+		$("div[data-win_id='"+attr+"']").css("z-index", 5555);
+	})
 
-})
-
-$(document).on("click", ".window", function(){
-	var attr = $(this).attr("data-win_id");
-	$(".window").css("z-index",0);
-	$("div[data-win_id='"+attr+"']").css("z-index", 5555);
-})
-
-$(document).on("click", "#menu_icon *", function(event){
+	$(document).on("click", "#menu_icon *", function(event){
 //FIXME: Nothing to change
+	})
+
+	$(document).on("click",".menu_element", function(){
+		var atr = $(this).attr('data-elem-id');
+		console.log("Try this: "+atr);
+		PageProp.MenuElements[atr].DoAction();
+		PageProp.Menu.CloseOpenMenu();
+	})
+
+	$(document).on("click", ".window a", function(event){
+		event.preventDefault();
+		var url = $(this).attr("href");
+		var win_id = $(this).closest(".window").attr("data-win_id");
+		PageProp.Objects[win_id].SetPageURL(url);
+		PageProp.Objects[win_id].LoadContent();
+	})
+
+	PageProp.Functions.MinMaxWindow = function(id){
+		PageProp.Objects[id].MinMaxWindow();
+	}
+
+	$(document).on("dblclick", ".window_top", function(){
+		var id = $(this).closest(".window").attr("data-win_id");
+		PageProp.Functions.MinMaxWindow(id);
+	})
+
+	$(document).on("contextmenu",function(e){
+		e.stopPropagation();
+		var c_class = $(this).attr('class');
+		if(c_class=="undefined")c_class = $(this).attr('id');
+		console.log(e['target']['className']);
+//		alert("Class is "+c_class);
+		//var res = PageProp.ContextMap.GetDOM("window");
+/*		if(res!==false){
+			$(res).appendTo("#desktop_content");
+		}
+*/
+		return false;
+	})
+
+	function ContextMenu(){
+		this.url = "jsons/context.json";
+		this.context_map = {};
+		this.constructor = function(url){
+			if(typeof(url)!="undefined")this.url = url;
+			this.context_map = PageProp.Functions.LoadJSON(this.url);
+			console.log(this.context_map);
+		}
+		this.LoadContextMap = function(url){
+			if(typeof(url)!="undefined")this.url = url;
+			this.context_map = PageProp.Functions.LoadJSON(this.url);
+			console.log(this.context_map);
+		}
+
+		this.GetDOM = function(c_class){
+			if(c_class in this.context_map){
+				var str = '<div class="contextMenu">';
+				$.each(this.context_map[c_class], function(index, value){
+					str+='<li class="context_element data-internall-command="'+value+'">';
+					str+=index+'</li>';
+				})
+				str+='</div>';
+				return str;
+			}
+			return false;
+		}
+	}
+
+	PageProp.ContextMap = new ContextMenu();
+	PageProp.ContextMap.LoadContextMap();
+	$F = PageProp.Functions;
+
 })
 
-$(document).on("click",".menu_element", function(){
-	var atr = $(this).attr('data-elem-id');
-	console.log("Try this: "+atr);
-	PageProp.MenuElements[atr].DoAction();
-	PageProp.Menu.CloseOpenMenu();
-})
-
-$(document).on("click", ".window a", function(event){
-	event.preventDefault();
-	var url = $(this).attr("href");
-	var win_id = $(this).closest(".window").attr("data-win_id");
-	PageProp.Objects[win_id].SetPageURL(url);
-	PageProp.Objects[win_id].LoadContent();
-})
-
-$F = PageProp.Functions;

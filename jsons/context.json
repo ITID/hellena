@@ -1,0 +1,11 @@
+{
+  "window":{
+    "Close":"close",
+    "Minimize/Maximize":"maximize",
+    "Hide":"minimize"
+  },
+  "taskbar_window":{
+    "Close":"close",
+    "Show/Hide":"minimize"
+  }
+}
