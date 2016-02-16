@@ -277,4 +277,22 @@ html, body{
 	min-height: 30px;
 	width: 200px;
 	background-color: #dddddd;
+	position: absolute;
+	color: #000;
+	padding: 0;
+}
+
+.contextMenu li{
+	padding: 0;
+	margin: 0;
+	width: 94%;
+	min-height: 30px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.contextMenu li:hover{
+	background-color: #57575F;
+	color:white;
+	cursor: pointer;
 }

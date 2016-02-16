@@ -87,7 +87,7 @@ function hellena_window(){
 	}
 	this.CreateObject = function(){
 		window_code = "<div class='window' data-win_id='"+this.id+"'>";
-		window_code+= "<div class='window_top'>";
+		window_code+= "<div class='window_top' data-context='window'>";
 		window_code+= "<li class='ui-state-default ui-corner-all buttons' internall_command='close'><span class='ui-icon ui-icon-closethick'></span></li>";
 		window_code+= "<li class='ui-state-default ui-corner-all buttons' internall_command='minimize'><span class='ui-icon ui-icon-triangle-1-n'></span></li>";
 		window_code+= "<li class='ui-state-default ui-corner-all buttons' internall_command='maximize'><span class='ui-icon ui-icon-extlink'></span></li>";
@@ -183,7 +183,7 @@ function taskbar_window(){
 	}
 	
 	this.CreateObject = function(){
-		var dom =  '<div class="taskbar_window active" win_id="'+this.id+'">';
+		var dom =  '<div class="taskbar_window active" win_id="'+this.id+'" data-context="taskbar-window">';
 		dom+= '<span>'+this.title+'</span></div>';
 		$("#sitebar").append(dom);
 		this.int_object = $("#sitebar div[win_id="+this.id+"]");
@@ -222,7 +222,7 @@ function menu(){
 	this.int_object = null;
 
 	this.CreateMenu = function(){
-		var dom = '<div id="menu_icon"><img src="res/menu2.png" class="menu_icon"><div id="menu" class="is_closed"><div id="menu_categories"></div><div id="menu_elements"></div></div></div>';
+		var dom = '<div id="menu_icon" data-context="menu"><img src="res/menu2.png" class="menu_icon"><div id="menu" class="is_closed"><div id="menu_categories"></div><div id="menu_elements"></div></div></div>';
 		$(dom).appendTo("#sitebar");
 		this.int_object = $("#menu");
 	}
@@ -428,18 +428,19 @@ $(document).on("click", "#menu_icon", function(event){
 		PageProp.Functions.MinMaxWindow(id);
 	})
 
-	$(document).on("contextmenu",function(e){
+	$(document).on("contextmenu","*[data-context]", function(e){
 		e.stopPropagation();
-		var c_class = $(this).attr('class');
-		if(c_class=="undefined")c_class = $(this).attr('id');
-		console.log(e['target']['className']);
-//		alert("Class is "+c_class);
-		//var res = PageProp.ContextMap.GetDOM("window");
-/*		if(res!==false){
-			$(res).appendTo("#desktop_content");
+		var cont_type = $(this).attr("data-context");
+		var dom = PageProp.ContextMap.GetDOM(cont_type);
+		if(dom!==false){
+			$(this).append(dom);
 		}
-*/
 		return false;
+	})
+
+	$(document).on("click", ".contextMenu li", function(){
+		var obj = $(this).closest("div[data-context]");
+		console.log(obj);
 	})
 
 	function ContextMenu(){
@@ -470,6 +471,12 @@ $(document).on("click", "#menu_icon", function(event){
 		}
 	}
 
+/*
+	$(document).on("click", "*:not(.contextMenu li)", function(e){
+		e.stopPropagation();
+		console.log("Clicked not to context menu");
+	})
+*/
 	PageProp.ContextMap = new ContextMenu();
 	PageProp.ContextMap.LoadContextMap();
 	$F = PageProp.Functions;
