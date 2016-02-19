@@ -86,7 +86,7 @@ function hellena_window(){
 		this.taskbar.InitialObject(this.title, this.id);
 	}
 	this.CreateObject = function(){
-		window_code = "<div class='window' data-win_id='"+this.id+"'>";
+		window_code = "<div class='window' data-win_id='"+this.id+"' context>";
 		window_code+= "<div class='window_top' data-context='window'>";
 		window_code+= "<li class='ui-state-default ui-corner-all buttons' internall_command='close'><span class='ui-icon ui-icon-closethick'></span></li>";
 		window_code+= "<li class='ui-state-default ui-corner-all buttons' internall_command='minimize'><span class='ui-icon ui-icon-triangle-1-n'></span></li>";
@@ -440,7 +440,21 @@ $(document).on("click", "#menu_icon", function(event){
 
 	$(document).on("click", ".contextMenu li", function(){
 		var obj = $(this).closest("div[data-context]");
-		console.log(obj);
+		var parent_obj = $(this).closest("div[context]");
+		var obj_type = $(obj).attr('data-context');
+		var int_command = $(this).attr('data-internall-command');
+		console.log("Doing "+int_command+" on type "+obj_type);
+		switch (obj_type){
+			case 'window':{
+				var win_id = $(parent_obj).attr('data-win_id');
+				PageProp.Objects[win_id].DoAction(int_command);
+				break;
+			}
+			default:{
+				alert("Unknow source of context was gated.");
+				break;
+			}
+		}
 	})
 
 	function ContextMenu(){
@@ -461,7 +475,7 @@ $(document).on("click", "#menu_icon", function(event){
 			if(c_class in this.context_map){
 				var str = '<div class="contextMenu">';
 				$.each(this.context_map[c_class], function(index, value){
-					str+='<li class="context_element data-internall-command="'+value+'">';
+					str+='<li class="context_element" data-internall-command="'+value+'">';
 					str+=index+'</li>';
 				})
 				str+='</div>';
@@ -471,12 +485,12 @@ $(document).on("click", "#menu_icon", function(event){
 		}
 	}
 
-/*
-	$(document).on("click", "*:not(.contextMenu li)", function(e){
-		e.stopPropagation();
-		console.log("Clicked not to context menu");
+	$(document).on("click", "*:not(.context_element)", function(e){
+		$(".contextMenu").remove();
+		console.log("Clicked any where");
 	})
-*/
+
+
 	PageProp.ContextMap = new ContextMenu();
 	PageProp.ContextMap.LoadContextMap();
 	$F = PageProp.Functions;

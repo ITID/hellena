@@ -46,6 +46,19 @@
 			"id": "adms3",
 			"content_url": "forms/form1.html"
 		}
+	},
+	"5":{
+		"id": "ok",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
 	}
+
 
 }
