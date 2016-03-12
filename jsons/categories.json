@@ -13,7 +13,7 @@
 	"2":{
 		"id": "load",
 		"title": "Load some content",
-		"cat_img": "res/icons/5.png",
+		"cat_img": "res/icons/6.png",
 		"menu_command": "load_submenu",
 		"menu_args": ""
 	},
@@ -23,6 +23,42 @@
 		"cat_img": "res/icons/3.png",
 		"menu_command": "load_submenu",
 		"menu_args": ""
+	},
+	"4":{
+		"id": "femo_1",
+		"title": "Administrate sistem",
+		"cat_img": "res/icons/6.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating",
+			"id": "adms",
+			"content_url": "forms/adms.html"
+		}
+	},
+	"5":{
+		"id": "femo_2",
+		"title": "Load some content",
+		"cat_img": "res/icons/6.png",
+		"menu_command": "load_submenu",
+		"menu_args": ""
+	},
+	"6":{
+		"id": "femo_3",
+		"title": "Load some content 2",
+		"cat_img": "res/icons/3.png",
+		"menu_command": "load_submenu",
+		"menu_args": ""
+	},
+	"7":{
+		"id": "femo_4",
+		"title": "Administrate sistem",
+		"cat_img": "res/icons/6.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating",
+			"id": "adms",
+			"content_url": "forms/adms.html"
+		}
 	}
 
 }

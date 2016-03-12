@@ -58,7 +58,257 @@
 			"id": "okru",
 			"content_url": "forms/form2.html"
 		}
+	},
+	"6":{
+		"id": "act2",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"7":{
+		"id": "load_4",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"8":{
+		"id": "ok1",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"9":{
+		"id": "act3",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"10":{
+		"id": "load_4",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"11":{
+		"id": "ok2",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"12":{
+		"id": "act3",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"13":{
+		"id": "load_5",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"14":{
+		"id": "ok3",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"15":{
+		"id": "act4",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"16":{
+		"id": "load_6",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"17":{
+		"id": "ok4",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"18":{
+		"id": "act5",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"19":{
+		"id": "load_7",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"20":{
+		"id": "ok5",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"21":{
+		"id": "act6",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"22":{
+		"id": "load_8",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"23":{
+		"id": "ok6",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
+	},
+	"24":{
+		"id": "act7",
+		"parent_id": "load2",
+		"title": "Administrate sistem 1",
+		"cat_img": "res/icons/1.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 1",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"25":{
+		"id": "load_9",
+		"parent_id": "load2",
+		"title": "Load some content 3",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "Administrating 2",
+			"id": "adms3",
+			"content_url": "forms/form1.html"
+		}
+	},
+	"26":{
+		"id": "ok7",
+		"parent_id": "load2",
+		"title": "Load odnoklassniki",
+		"cat_img": "res/icons/2.png",
+		"menu_command": "open_window",
+		"menu_args": {
+			"title": "odnoklassniki.ru",
+			"id": "okru",
+			"content_url": "forms/form2.html"
+		}
 	}
-
-
 }

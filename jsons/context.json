@@ -7,5 +7,10 @@
   "taskbar_window":{
     "Close":"close",
     "Show/Hide":"minimize"
+  },
+  "desktop_content":{
+    "Close":"close",
+    "Show/Hide":"minimize"
   }
+
 }

@@ -239,6 +239,13 @@ function menu(){
 			this.is_opened = true;
 		}
 	}
+
+	this.CloseIf = function(){
+		$(this.int_object).removeClass("is_opened");
+		$(this.int_object).addClass("is_closed");
+		this.is_opened = false;
+
+	}
 }
 
 PageProp.Functions.GetElemCount = function(obj){
@@ -488,6 +495,10 @@ $(document).on("click", "#menu_icon", function(event){
 	$(document).on("click", "*:not(.context_element)", function(e){
 		$(".contextMenu").remove();
 		console.log("Clicked any where");
+	})
+
+	$(document).on("click", "#desktop_content", function(e){
+		PageProp.Menu.CloseIf();
 	})
 
 
